@@ -1,0 +1,313 @@
+<%= render "slider"%>
+<%= render "introduction" %>
+<%= render "services"%>
+<%= render "products", categories: @categories%>
+<!-- Start Modal Compare-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="mfp-content">
+          <div class="compare_box">
+            <div class="table-responsive"></div>
+            <table class="table table-bordered text-center">
+              <tbody>
+                <tr class="pr_image">
+                  <td class="row_title">Product Image</td>
+                  <td class="row_img"><img src="./images/Products/product_img1.jpg" alt="compare-img"></td>
+                  <td class="row_img"><img src="./images/Products/product_img2.jpg" alt="compare-img"></td>
+                  <td class="row_img"><img src="./images/Products/product_img3.jpg" alt="compare-img"></td>
+                </tr>
+                <tr class="pr_title">
+                  <td class="row_title">Product Name</td>
+                  <td class="product__item-name"><a href="shop-product-detail.html">Blue Dress For
+                      Woman</a></td>
+                  <td class="product__item-name"><a href="shop-product-detail.html">Lether Gray
+                      Tuxedo</a></td>
+                  <td class="product__item-name"><a href="shop-product-detail.html">woman full
+                      sliv dress</a></td>
+                </tr>
+                <tr class="pr_price">
+                  <td class="row_title">Price</td>
+                  <td class="product__item-price"><span class="price">$45.00</span></td>
+                  <td class="product__item-price"><span class="price">$55.00</span></td>
+                  <td class="product__item-price"><span class="price">$68.00</span></td>
+                </tr>
+                <tr class="pr_rating">
+                  <td class="row_title">Rating</td>
+                  <td>
+                    <div class="rating_wrap">
+                      <div class="rating"></div>
+                      <div class="product__item-rate"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                      </div><span class="rating_num">(21)</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="rating_wrap">
+                      <div class="rating"></div>
+                      <div class="product__item-rate"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                      </div><span class="rating_num">(15)</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="rating_wrap">
+                      <div class="rating"></div>
+                      <div class="product__item-rate"><span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                      </div><span class="rating_num">(25)</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="pr_add_to_cart">
+                  <td class="row_title">Add To Cart</td>
+                  <td class="product__compare-addtocart"><a class="btn btn-fill-out btn-radius" href="#"><i
+                        class="fa fa-shopping-basket"></i>Add to Cart</a></td>
+                  <td class="product__compare-addtocart"><a class="btn btn-fill-out btn-radius" href="#"><i
+                        class="fa fa-shopping-basket"></i>Add to Cart</a></td>
+                  <td class="product__compare-addtocart"><a class="btn btn-fill-out btn-radius" href="#"><i
+                        class="fa fa-shopping-basket"></i>Add to Cart</a></td>
+                </tr>
+                <tr class="description">
+                  <td class="row_title">Description</td>
+                  <td class="row_text">
+                    <p></p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever
+                    since the 1500s, when an unknown printer took a galley of type and
+                  </td>
+                  <td class="row_text">
+                    <p></p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever
+                    since the 1500s, when an unknown printer took a galley of type and
+                  </td>
+                  <td class="row_text">
+                    <p></p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever
+                    since the 1500s, when an unknown printer took a galley of type and
+                  </td>
+                </tr>
+                <tr class="pr_color">
+                  <td class="row_title">Color</td>
+                  <td class="row_color">
+                    <div class="product_color_switch"><span data-color="#87554B"
+                        style="background-color: rgb(135, 85, 75);"></span><span data-color="#333333"
+                        style="background-color: rgb(51, 51, 51);"></span><span data-color="#DA323F"
+                        style="background-color: rgb(218, 50, 63);"></span></div>
+                  </td>
+                  <td class="row_color"> ""</td>
+                  <td class="row_color">
+                    <div class="product_color_switch"><span data-color="#333333"
+                        style="background-color: rgb(51, 51, 51);"></span><span data-color="#7C502F"
+                        style="background-color: rgb(124, 80, 47);"></span><span data-color="#2F366C"
+                        style="background-color: rgb(47, 54, 108);"></span><span data-color="#874A3D"
+                        style="background-color: rgb(135, 74, 61);"></span></div>
+                  </td>
+                </tr>
+                <tr class="pr_size">
+                  <td class="row_title">Sizes Available</td>
+                  <td class="row_size"><span>S, M, L, XL</span></td>
+                  <td class="row_size"><span>S, M, L, XL</span></td>
+                  <td class="row_size"><span>S, M, L, XL</span></td>
+                </tr>
+                <tr class="pr_stock">
+                  <td class="row_title">Item Availability</td>
+                  <td class="row_stock"><span class="in-stock" style="color:#529d55">In
+                      Stock</span></td>
+                  <td class="row_stock"><span class="out-stock" style="color:#ff3650">Out Of
+                      Stock</span></td>
+                  <td class="row_stock"><span class="in-stock" style="color:#529d55">In
+                      Stock</span></td>
+                </tr>
+                <tr class="pr_weight">
+                  <td class="row_title">Weight</td>
+                  <td class="row_weight">""</td>
+                  <td class="row_weight">""</td>
+                  <td class="row_weight">""</td>
+                </tr>
+                <tr class="pr_dimensions">
+                  <td class="row_title">Dimensions</td>
+                  <td class="row_dimensions">N/A</td>
+                  <td class="row_dimensions">N/A</td>
+                  <td class="row_dimensions">N/A</td>
+                </tr>
+                <tr class="pr_remove">
+                  <td class="row_title"></td>
+                  <td class="row_remove"><a href="#"><span>Remove</span><i class="fa fa-times"></i></a></td>
+                  <td class="row_remove"><a href="#"><span>Remove</span><i class="fa fa-times"></i></a></td>
+                  <td class="row_remove"><a href="#"><span>Remove</span><i class="fa fa-times"></i></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal Compare-->
+<!-- Start Modal Show Product Info-->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <div class="product-image">
+              <div class="product_img_box"><img id="product_img" src="./images/products/product_img1.jpg"
+                  data-zoom-image="./images/products/product_zoom_img1.jpg" alt="product_img1">
+              </div>
+              <div class="product_gallery_item slick_slider slick-initialized slick-slider" id="pr_item_gallery"
+                data-slides-to-show="4" data-slides-to-scroll="1" data-infinite="false">
+                <div class="slick-list draggable" aria-live="polite">
+                  <div class="slick-track" role="listbox" style="opacity: 1; width: 100%; left: 0px;">
+                    <div class="item slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false"
+                      tabindex="-1" role="option" aria-describedby="slick-slide00" style="width: 22%;"><a
+                        class="product_gallery_item active" href="#" data-image="./images/products/product_img1.jpg"
+                        data-zoom-image="./images/products/product_zoom_img1.jpg" tabindex="0"><img
+                          src="./images/products/product_small_img1.jpg" alt="product_small_img1"></a></div>
+                    <div class="item slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1"
+                      role="option" aria-describedby="slick-slide01" style="width: 22%;"><a
+                        class="product_gallery_item" href="#" data-image="./images/products/product_img1-2.jpg"
+                        data-zoom-image="./images/products/product_zoom_img2.jpg" tabindex="0"><img
+                          src="./images/products/product_small_img2.jpg" alt="product_small_img2"></a></div>
+                    <div class="item slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="-1"
+                      role="option" aria-describedby="slick-slide02" style="width: 22%;"><a
+                        class="product_gallery_item" href="#" data-image="./images/products/product_img1-3.jpg"
+                        data-zoom-image="./images/products/product_zoom_img3.jpg" tabindex="0"><img
+                          src="./images/products/product_small_img3.jpg" alt="product_small_img3"></a></div>
+                    <div class="item slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="-1"
+                      role="option" aria-describedby="slick-slide03" style="width: 22%;"><a
+                        class="product_gallery_item" href="#" data-image="./images/products/product_img1-4.jpg"
+                        data-zoom-image="./images/products/product_zoom_img4.jpg" tabindex="0"><img
+                          src="./images/products/product_small_img4.jpg" alt="product_small_img4"></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12">
+            <div class="infor__tile">blue Dress for Woman </div>
+            <div class="infor__price">
+              <div class="current-price">$45.00 </div>
+              <strike>$55.25</strike>
+              <div class="sale-off">35% Off</div>
+              <div class="rate">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>(21)
+              </div>
+            </div>
+            <div class="infor__content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa
+                enim. Nullam id varius nunc id varius nunc.</p>
+            </div>
+            <ul class="infor__service">
+              <li class="infor__service-item"><i class="fa fa-shield-virus">&nbsp;</i>1 Year AL
+                Jazeera Brand Warranty</li>
+              <li class="infor__service-item"><i class="fa fa-sync">&nbsp;</i>30 Day Return Policy
+              </li>
+              <li class="infor__service-item"><i class="fa fa-shopping-bag">&nbsp;</i>Cash on Delivery
+                available</li>
+            </ul>
+            <div class="infor__color">
+              <div class="product_color_switch">Color<span class="active" data-color="#87554B"
+                  style="background-color: rgb(135, 85, 75);"></span><span data-color="#333333"
+                  style="background-color: rgb(51, 51, 51);"></span><span data-color="#DA323F"
+                  style="background-color: rgb(218, 50, 63);"></span></div>
+            </div>
+            <div class="infor__size">
+              <div class="pr_switch_wrap"><span class="switch_lable">Size</span>
+                <div class="product_size_switch">
+                  <span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span></div>
+              </div>
+            </div>
+            <hr>
+            <div class="infor__addtocart">
+              <div class="cart_extra">
+                <div class="cart-product-quantity">
+                  <div class="quantity">
+                    <input class="minus" type="button" value="-">
+                    <input class="qty" type="text" name="quantity" value="1" title="Qty" size="4">
+                    <input class="plus" type="button" value="+">
+                  </div>
+                </div>
+                <div class="cart_btn">
+                  <button class="btn btn-fill-out btn-addtocart" type="button"><i class="fa fa-shopping-bag"></i> Add
+                    to cart</button><a class="add_compare" href="#"><i class="fa fa-random"></i></a><a
+                    class="add_wishlist" href="#"><i class="far fa-heart"></i></a>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <ul class="infor__meta">
+              <li> <a href="#">BE45VGRT</a></li>
+              <li>Category:&nbsp;<a href="#">Clothing</a></li>
+              <li>Tags:&nbsp;<a href="#">Cloth, </a><a href="#">printed</a></li>
+            </ul>
+            <div class="infor__share"><span>Share:&nbsp;</span><i class="fab fa-facebook-f"></i><i
+                class="fab fa-twitter"></i><i class="fab fa-goodreads-g"></i><i class="fab fa-youtube"></i><i
+                class="fab fa-instagram"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Modal Show Product Info-->
+<%= render "project" %>
+<div class="instagram">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <div class="col-12">
+        <div class="instagram__follow-box"><i class="fab fa-instagram"></i>
+          <h3>Đối Tác</h3>
+        </div>
+        <div class="instagram__images-box owl-carousel owl-theme"><a class="instagram__item" href="#"><img
+              src="images/home/furniture_insta1.jpg" alt="funiture_insta1"></a><a class="instagram__item"
+            href="#"><img src="images/home/furniture_insta2.jpg" alt="funiture_insta2"></a><a class="instagram__item"
+            href="#"><img src="images/home/furniture_insta3.jpg" alt="funiture_insta3"></a><a class="instagram__item"
+            href="#"><img src="images/home/furniture_insta4.jpg" alt="funiture_insta4"></a><a class="instagram__item"
+            href="#"><img src="images/home/furniture_insta5.jpg" alt="funiture_insta5"></a><a class="instagram__item"
+            href="#"><img src="images/home/furniture_insta6.jpg" alt="funiture_insta6"></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="partners">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="partners__images-box owl-carousel owl-theme">
+          <div class="partners__item"><img src="images/home/cl_logo1.png" alt="logo partner"></div>
+          <div class="partners__item"><img src="images/home/cl_logo2.png" alt="logo partner"></div>
+          <div class="partners__item"><img src="images/home/cl_logo3.png" alt="logo partner"></div>
+          <div class="partners__item"><img src="images/home/cl_logo4.png" alt="logo partner"></div>
+          <div class="partners__item"><img src="images/home/cl_logo5.png" alt="logo partner"></div>
+          <div class="partners__item"><img src="images/home/cl_logo6.png" alt="logo partner"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

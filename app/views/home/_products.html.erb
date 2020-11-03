@@ -1,0 +1,48 @@
+<div class="product" id="product">
+  <div class="container">
+    <div class="product__title">Sản Phẩm</div>
+    <div class="product__under"></div>
+    <div class="product__select">
+        <select onchange="run()" id="product-type">
+            <option value="0">Inverter</option>
+            <option value="1">Tấm pin NLMT</option>
+            <option value="2">Đèn NLMT</option>
+        </select>
+        <ion-icon name="chevron-down-outline"></ion-icon>    </div>
+    <div class="row" id="inverter">
+      <% categories.first.products.each do |product| %>
+        <%= render "product_item", product: product %>
+      <% end %>
+    </div>
+     <div class="row d-none" id="pin">
+      <% categories.find_by(id: 2).products.each do |product| %>
+        <%= render "product_item", product: product %>
+      <% end %>
+    </div>
+    <div class="row d-none" id="den">
+      <% categories.last.products.each do |product| %>
+        <%= render "product_item", product: product %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<script>
+    function run(){
+        if(document.getElementById("product-type").value == 1){
+            document.getElementById("inverter").classList.add("d-none")
+            document.getElementById("pin").classList.remove("d-none")
+            document.getElementById("den").classList.add("d-none")
+        }
+        else if(document.getElementById("product-type").value == 2){
+            document.getElementById("inverter").classList.add("d-none")
+            document.getElementById("pin").classList.add("d-none")
+            document.getElementById("den").classList.remove("d-none")
+        }
+        else{
+            document.getElementById("inverter").classList.remove("d-none")
+            document.getElementById("pin").classList.add("d-none")
+            document.getElementById("den").classList.add("d-none")
+        } 
+       
+    }
+</script>
